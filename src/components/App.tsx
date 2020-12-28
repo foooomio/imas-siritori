@@ -6,6 +6,7 @@ import Chat, {
   QuickReplyItemProps,
 } from '@chatui/core';
 import { ImasSiritori, ImasSiritoriState } from '../lib/ImasSiritori';
+import { IdolBubble, TweetBubble, HelpBubble } from './Bubble';
 
 const defaultMessages: Omit<MessageProps, '_id'>[] = [
   {
@@ -26,6 +27,7 @@ const defaultMessages: Omit<MessageProps, '_id'>[] = [
 const quickReplies: QuickReplyItemProps[] = [
   { name: 'ニューゲーム' },
   { name: 'ギブアップ' },
+  { name: 'ヘルプ' },
 ];
 
 export const App = () => {
@@ -53,7 +55,7 @@ export const App = () => {
       case 'continued':
         appendMsg({
           type: 'idol',
-          content: state.word,
+          content: { idol: state.word },
         });
         break;
       case 'ended':
@@ -128,6 +130,9 @@ export const App = () => {
             const state = imasSiritori.current!.play();
             handleSiritoriState(state);
             break;
+          case 'ヘルプ':
+            appendMsg({ type: 'help', content: undefined });
+            break;
           default:
             handleSiritoriState(imasSiritori.current!.answer(val));
             break;
@@ -136,39 +141,14 @@ export const App = () => {
     }
   }
 
-  function renderMessageContent(msg: MessageProps) {
-    const { type, content } = msg;
+  function renderMessageContent({ type, content }: MessageProps) {
     switch (type) {
       case 'idol':
-        return (
-          <Bubble
-            content={
-              <a href={content.url} target="_blank" rel="noopener noreferrer">
-                {content.name}（{content.kana}）
-              </a>
-            }
-          />
-        );
+        return <IdolBubble idol={content.idol} />;
       case 'share':
-        const text = `${content.count}人目のアイドルでBotに${
-          content.winner === 'user' ? '勝ちました' : '負けました'
-        }。`;
-        const url = new URL('https://twitter.com/intent/tweet');
-        url.searchParams.set('url', 'https://imas-siritori.pikopikopla.net');
-        url.searchParams.set('text', `${text} #アイマスしりとり`);
-        return (
-          <Bubble
-            content={
-              <a
-                href={url.toString()}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitterでシェアする
-              </a>
-            }
-          />
-        );
+        return <TweetBubble count={content.count} winner={content.winner} />;
+      case 'help':
+        return <HelpBubble />;
       case 'text':
         return <Bubble content={content.text} />;
     }
