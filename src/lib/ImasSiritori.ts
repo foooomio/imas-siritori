@@ -21,7 +21,7 @@ export class ImasSiritori {
   }
 
   public answer(text: string): ImasSiritoriState {
-    return this.bot.answer(text);
+    return this.bot.answer(text.normalize('NFKC'));
   }
 
   public giveUp(): readonly Idol[] {
