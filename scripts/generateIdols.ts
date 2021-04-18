@@ -3,32 +3,35 @@ import { URL } from 'url';
 import fs from 'fs';
 import path from 'path';
 
-const title2brand = (title: string): string => {
-  const table: Record<string, string> = {
-    '765AS': 'Idolmaster',
-    CinderellaGirls: 'CinderellaGirls',
-    MillionStars: 'MillionLive',
-    '315ProIdols': 'SideM',
-    '283Pro': 'ShinyColors',
-  };
-  return table[title] ?? 'Other';
-};
+const modifyBrand = (brand: string): string =>
+  [
+    '765AS',
+    'CinderellaGirls',
+    'MillionLive',
+    'SideM',
+    'ShinyColors',
+    'Other',
+  ].includes(brand)
+    ? brand
+    : 'Other';
 
 const query = `
 PREFIX schema: <http://schema.org/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX imas: <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#>
 
-SELECT ?name ?kana ?title ?url
+SELECT ?name ?kana ?brand ?url
 WHERE {
   ?s a imas:Idol ;
     rdfs:label ?name ;
-    imas:Title ?title ;
-    imas:IdolListURL ?url .
+    imas:Brand ?brand .
+  OPTIONAL { ?s imas:IdolListURL ?url }
   OPTIONAL { ?s imas:alternateNameKana ?tmp } # ロコ・ジュリア・他対策
   OPTIONAL { ?s imas:nameKana ?tmp }
   OPTIONAL { ?s imas:givenNameKana ?tmp } # 詩花・玲音対策
   BIND(IF(?name = "エミリー", "えみりー", ?tmp) AS ?kana) # エミリー対策
+  FILTER(?brand != "1stVision"@en || ?brand != "Xenoglossia"@en)
+  FILTER(?s != <https://sparql.crssnky.xyz/imasrdf/RDFs/detail/Akizuki_Ryo_876>)
 }
 ORDER BY ?kana
 `;
@@ -43,8 +46,8 @@ ORDER BY ?kana
     (binding: Record<string, { value: string }>) => ({
       name: binding.name.value,
       kana: binding.kana.value,
-      brand: title2brand(binding.title.value),
-      url: binding.url.value,
+      brand: modifyBrand(binding.brand.value),
+      url: binding.url?.value,
     })
   );
 

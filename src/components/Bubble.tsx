@@ -3,10 +3,11 @@ import { ExternalLink } from './ExternalLink';
 import type { Idol } from '../lib/ImasSiritori';
 
 export const IdolBubble = ({ idol }: { idol: Idol }) => {
-  const content = (
-    <ExternalLink href={idol.url}>
-      {idol.name}（{idol.kana}）
-    </ExternalLink>
+  const text = `${idol.name} （${idol.kana}）`;
+  const content = idol.url ? (
+    <ExternalLink href={idol.url}>{text}</ExternalLink>
+  ) : (
+    text
   );
   return <Bubble content={content} />;
 };

@@ -2,7 +2,7 @@ import { SiritoriBot, SiritoriState, SiritoriWord } from './SiritoriBot';
 
 export interface Idol extends SiritoriWord {
   readonly brand: string;
-  readonly url: string;
+  readonly url?: string;
 }
 
 export type ImasSiritoriState = SiritoriState<Idol>;

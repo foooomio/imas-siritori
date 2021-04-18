@@ -56,19 +56,13 @@
   {
     "name": "秋月律子",
     "kana": "あきづきりつこ",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10001"
   },
   {
     "name": "秋月涼",
     "kana": "あきづきりょう",
     "brand": "SideM",
-    "url": "https://idollist.idolmaster-official.jp/detail/40004"
-  },
-  {
-    "name": "秋月涼",
-    "kana": "あきづきりょう",
-    "brand": "Other",
     "url": "https://idollist.idolmaster-official.jp/detail/40004"
   },
   {
@@ -84,6 +78,12 @@
     "url": "https://idollist.idolmaster-official.jp/detail/40006"
   },
   {
+    "name": "緋田美琴",
+    "kana": "あけたみこと",
+    "brand": "ShinyColors",
+    "url": "https://idollist.idolmaster-official.jp/detail/50025"
+  },
+  {
     "name": "浅倉透",
     "kana": "あさくらとおる",
     "brand": "ShinyColors",
@@ -94,6 +94,11 @@
     "kana": "あさのふうか",
     "brand": "CinderellaGirls",
     "url": "https://idollist.idolmaster-official.jp/detail/20007"
+  },
+  {
+    "name": "朝比奈りん",
+    "kana": "あさひなりん",
+    "brand": "Other"
   },
   {
     "name": "浅利七海",
@@ -128,7 +133,7 @@
   {
     "name": "天海春香",
     "kana": "あまみはるか",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10002"
   },
   {
@@ -232,6 +237,11 @@
     "kana": "いむらせつな",
     "brand": "CinderellaGirls",
     "url": "https://idollist.idolmaster-official.jp/detail/20022"
+  },
+  {
+    "name": "イム・ユジン",
+    "kana": "いむ・ゆじん",
+    "brand": "CinderellaGirls"
   },
   {
     "name": "イヴ・サンタクロース",
@@ -452,19 +462,19 @@
   {
     "name": "我那覇響",
     "kana": "がなはひびき",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10003"
   },
   {
     "name": "菊地真",
     "kana": "きくちまこと",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10004"
   },
   {
     "name": "如月千早",
     "kana": "きさらぎちはや",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10005"
   },
   {
@@ -702,6 +712,11 @@
     "url": "https://idollist.idolmaster-official.jp/detail/20070"
   },
   {
+    "name": "サイネリア",
+    "kana": "さいねりあ",
+    "brand": "Other"
+  },
+  {
     "name": "冴島清美",
     "kana": "さえじまきよみ",
     "brand": "CinderellaGirls",
@@ -736,6 +751,11 @@
     "kana": "さくらいももか",
     "brand": "CinderellaGirls",
     "url": "https://idollist.idolmaster-official.jp/detail/20075"
+  },
+  {
+    "name": "桜井夢子",
+    "kana": "さくらいゆめこ",
+    "brand": "Other"
   },
   {
     "name": "櫻木真乃",
@@ -786,6 +806,11 @@
     "url": "https://idollist.idolmaster-official.jp/detail/20079"
   },
   {
+    "name": "三条ともみ",
+    "kana": "さんじょうともみ",
+    "brand": "Other"
+  },
+  {
     "name": "財前時子",
     "kana": "ざいぜんときこ",
     "brand": "CinderellaGirls",
@@ -812,7 +837,7 @@
   {
     "name": "四条貴音",
     "kana": "しじょうたかね",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10006"
   },
   {
@@ -892,6 +917,11 @@
     "kana": "しんげんせいじ",
     "brand": "SideM",
     "url": "https://idollist.idolmaster-official.jp/detail/40028"
+  },
+  {
+    "name": "ジュニー",
+    "kana": "じゅにー",
+    "brand": "CinderellaGirls"
   },
   {
     "name": "ジュリア",
@@ -992,7 +1022,7 @@
   {
     "name": "高槻やよい",
     "kana": "たかつきやよい",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10007"
   },
   {
@@ -1110,6 +1140,11 @@
     "url": "https://idollist.idolmaster-official.jp/detail/20108"
   },
   {
+    "name": "東豪寺麗華",
+    "kana": "とうごうじれいか",
+    "brand": "Other"
+  },
+  {
     "name": "徳川まつり",
     "kana": "とくがわまつり",
     "brand": "MillionLive",
@@ -1174,6 +1209,12 @@
     "kana": "ななおゆりこ",
     "brand": "MillionLive",
     "url": "https://idollist.idolmaster-official.jp/detail/30024"
+  },
+  {
+    "name": "七草にちか",
+    "kana": "ななくさにちか",
+    "brand": "ShinyColors",
+    "url": "https://idollist.idolmaster-official.jp/detail/50024"
   },
   {
     "name": "並木芽衣子",
@@ -1256,7 +1297,7 @@
   {
     "name": "萩原雪歩",
     "kana": "はぎわらゆきほ",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10008"
   },
   {
@@ -1430,13 +1471,13 @@
   {
     "name": "双海亜美",
     "kana": "ふたみあみ",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10009"
   },
   {
     "name": "双海真美",
     "kana": "ふたみまみ",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10010"
   },
   {
@@ -1466,7 +1507,7 @@
   {
     "name": "星井美希",
     "kana": "ほしいみき",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10011"
   },
   {
@@ -1580,7 +1621,7 @@
   {
     "name": "三浦あずさ",
     "kana": "みうらあずさ",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10012"
   },
   {
@@ -1628,7 +1669,7 @@
   {
     "name": "水瀬伊織",
     "kana": "みなせいおり",
-    "brand": "Idolmaster",
+    "brand": "765AS",
     "url": "https://idollist.idolmaster-official.jp/detail/10013"
   },
   {
@@ -1852,6 +1893,11 @@
     "kana": "りゅうざきかおる",
     "brand": "CinderellaGirls",
     "url": "https://idollist.idolmaster-official.jp/detail/20187"
+  },
+  {
+    "name": "リュ・ヘナ",
+    "kana": "りゅ・へな",
+    "brand": "CinderellaGirls"
   },
   {
     "name": "玲音",
