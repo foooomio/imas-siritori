@@ -13,28 +13,29 @@
     "generate-idols": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node scripts/generateIdols.ts"
   },
   "dependencies": {
-    "@chatui/core": "^0.3.2",
+    "@chatui/core": "^0.3.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@types/mocha": "^8.2.2",
+    "@types/node": "^15.12.5",
     "@types/node-fetch": "^2.5.10",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
-    "copy-webpack-plugin": "^8.1.1",
-    "css-loader": "^5.2.2",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^5.2.6",
     "less": "^4.1.1",
-    "less-loader": "^8.1.1",
-    "mocha": "^8.3.2",
+    "less-loader": "^10.0.0",
+    "mocha": "^9.0.1",
     "node-fetch": "^2.6.1",
-    "prettier": "^2.2.1",
-    "style-loader": "^2.0.0",
-    "ts-loader": "^8.1.0",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.4",
-    "webpack": "^5.33.2",
-    "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "4.0.0-beta.2"
+    "prettier": "^2.3.2",
+    "style-loader": "^3.0.0",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^4.0.0-beta.3"
   }
 }
