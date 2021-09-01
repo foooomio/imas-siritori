@@ -1,5 +1,4 @@
 import fetch from 'node-fetch';
-import { URL } from 'url';
 import fs from 'fs';
 import path from 'path';
 
