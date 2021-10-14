@@ -1,6 +1,5 @@
 import fetch from 'node-fetch';
 import fs from 'fs';
-import path from 'path';
 
 const modifyBrand = (brand: string): string =>
   [
@@ -35,23 +34,22 @@ WHERE {
 ORDER BY ?kana
 `;
 
-(async () => {
-  const url = new URL('https://sparql.crssnky.xyz/spql/imas/query');
-  url.searchParams.set('output', 'json');
-  url.searchParams.set('query', query);
+const url = new URL('https://sparql.crssnky.xyz/spql/imas/query');
+url.searchParams.set('output', 'json');
+url.searchParams.set('query', query);
 
-  const json = await fetch(url).then((res) => res.json());
-  const idols = json.results.bindings.map(
-    (binding: Record<string, { value: string }>) => ({
-      name: binding.name.value,
-      kana: binding.kana.value,
-      brand: modifyBrand(binding.brand.value),
-      url: binding.url?.value,
-    })
-  );
+const res = await fetch(url.toString());
+const json = (await res.json()) as any;
+const idols = json.results.bindings.map(
+  (binding: Record<string, { value: string }>) => ({
+    name: binding.name.value,
+    kana: binding.kana.value,
+    brand: modifyBrand(binding.brand.value),
+    url: binding.url?.value,
+  })
+);
 
-  fs.writeFileSync(
-    path.resolve(__dirname, '../public/idols.json'),
-    JSON.stringify(idols, null, 2) + '\n'
-  );
-})();
+fs.writeFileSync(
+  new URL('../public/idols.json', import.meta.url),
+  JSON.stringify(idols, null, 2) + '\n'
+);
